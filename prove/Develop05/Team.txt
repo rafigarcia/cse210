@@ -1,0 +1,93 @@
+
+
+Class Goal (parent) 
+    
+Attributes {
+    _shortName: String 
+    _description: String 
+    _points : String
+}
+
+Setters & Getters
+
+Constructor {
+    _Goal(name, description, points)
+}
+
+Methods{
+    RecordEvent(): void ()
+    IsComplete() : bool
+    GetDetailsString() : string 
+    GetStringRepresentation() : string
+}
+
+
+Class SimpleGoal 
+
+Attributes{
+    _isComplete: bool
+}
+
+Constructor{
+    SimpleGoal(name, description, points)
+}
+
+Methods{
+    RecordEvent(): void
+    IsComplete() : bool
+    GetStringrepresentation() : String 
+}
+
+Class EternalGoal (Child of Goal) 
+Attributes 0
+
+Constructor{
+    EternalGoal(name, description, points)
+}
+
+Methods {
+    RecordEvent(): void
+    IsComplete() : bool
+    GetStringrepresentation() : String
+}
+
+Class ChecklistGoal (Child of Goal) 
+
+Attributes{
+    _amountCompleted: int
+    _target: int
+    _bonus: int
+}
+
+Constructor{
+    ChecklistGoal(name, description, points, target, bonus)
+}
+
+Methods{
+    RecordEvent(): void
+    IsComplete() : bool
+    GetDetailString(): String
+    GetStringrepresentation() : String   
+}
+
+Class GoalManager 
+
+Attributes{
+    _goals : list<Goal>
+    _score: int
+}
+
+Constructor{
+    GoalManager()
+}
+
+Methods{
+    Start(): void 
+    DisplayPlayerInfo(): void
+    ListGoalName(): void
+    ListGoalDetails(): void
+    CreateGoal(): void
+    RecordEvent(): void
+    SaveGoals() : void
+    LoadGoals() : void
+}
