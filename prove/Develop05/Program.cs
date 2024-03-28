@@ -4,6 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop05 World!");
+        // To Exceed the core requirements, I've added an extra qualification of the points wich are the Levels, the user can level up every time they reach a certain number of points. This sistem also will increase as the user levels up. 
+        GoalManager goalManager = new GoalManager();
+        goalManager.Start();
     }
 }
